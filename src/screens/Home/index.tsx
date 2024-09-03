@@ -14,7 +14,14 @@ export default function Home() {
     "Gerência",
   ]);
 
-  const [nomeFuncionario, setNomeFuncionario] = useState([])
+  const [nomeFuncionario, setNomeFuncionario] = useState([
+    "Don Gordon",
+    "John Steven Doe",
+    "Barry Jhayson",
+    "Tiwa Cavage",
+    "James Williams",
+    "Sarah Wilson "
+  ])
 
   const [deptFuncionarioSelected, setDeptFuncionarioSelected] = useState("Design UI/UX");
 
@@ -40,7 +47,13 @@ export default function Home() {
 
         <View style={styles.containerColuna}>
           <Text style={styles.textoTitulo1}>Funcionários</Text>
-          <FuncionarioCard />
+          <FlatList
+            data={nomeFuncionario}
+            keyExtractor={(item) => item}
+            renderItem={({ item }) => (<FuncionarioCard />
+            )}
+            showsVerticalScrollIndicator={false}
+          />
         </View>
 
       </View>
