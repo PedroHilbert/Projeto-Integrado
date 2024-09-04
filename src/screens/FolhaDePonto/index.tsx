@@ -50,6 +50,15 @@ export default function FolhaDePonto() {
             renderSectionHeader={({ section }) => (
               <Text style={styles.textoTituloSecao}>{section.title}</Text>
             )}
+            contentContainerStyle={
+              nomeFuncionario.length === 0 && { flex: 1, justifyContent: 'center' }
+            }
+            ListEmptyComponent={() => (
+              <Text style={{ textAlign: 'center', fontFamily: 'Inter_600SemiBold', fontSize: 20 }}>
+                Não há dados de pontos {'\n'} registrados ainda!
+              </Text>
+            )}
+            showsVerticalScrollIndicator={false}
           />
         </View>
       </View>
