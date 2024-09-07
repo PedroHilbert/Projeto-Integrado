@@ -1,19 +1,21 @@
 import {
   createBottomTabNavigator,
   BottomTabNavigationProp,
-} from '@react-navigation/bottom-tabs';
-import Home from '../screens/Home/index';
-import Profile from '../screens/Profile/index';
-import FolhaDePonto from '../screens/FolhaDePonto/index';
+} from "@react-navigation/bottom-tabs";
+import Home from "../screens/Home/index";
+import Profile from "../screens/Profile/index";
+import FolhaDePonto from "../screens/FolhaDePonto/index";
 
-
-import AntDesign from '@expo/vector-icons/AntDesign';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import AntDesign from "@expo/vector-icons/AntDesign";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import Funcionario from "../screens/Funcionario";
 
 type AppRoutes = {
   home: undefined;
   profile: undefined;
+  folhaDePonto: undefined;
+  funcionario: undefined;
 };
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
@@ -26,15 +28,16 @@ export function AppRoutes() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarActiveTintColor: '#F7AC25',
-        tabBarInactiveTintColor: '#CFD8DC',
+        tabBarActiveTintColor: "#F7AC25",
+        tabBarInactiveTintColor: "#CFD8DC",
         tabBarStyle: {
-          backgroundColor: '#082777',
+          backgroundColor: "#082777",
           borderTopWidth: 0,
           borderTopStartRadius: 12,
           borderTopEndRadius: 12,
         },
-      }}>
+      }}
+    >
       <Screen
         name="home"
         component={Home}
@@ -62,7 +65,11 @@ export function AppRoutes() {
           ),
         }}
       />
-      {/* <Screen name="funcionario" component={Funcionario} />*/}
+      <Screen
+        name="funcionario"
+        component={Funcionario}
+        options={{ tabBarButton: () => null }}
+      />
     </Navigator>
   );
 }

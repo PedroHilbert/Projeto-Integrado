@@ -1,13 +1,15 @@
-import { Text, View, TouchableOpacity } from 'react-native';
-import { styles } from './styles';
+import { Text, View, TouchableOpacity } from "react-native";
+import { styles } from "./styles";
+import ScreenHeader from "../../components/ScreenHeader";
 
 export default function Profile() {
   return (
     <>
       <View style={styles.container}>
         <View style={styles.cabecalho}>
-          <Text style={styles.textoCabecalho}>Profile</Text>
+          <ScreenHeader title="Perfil" />
         </View>
+        <View style={styles.containerColuna}></View>
       </View>
     </>
   );
