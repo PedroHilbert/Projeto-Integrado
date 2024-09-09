@@ -22,7 +22,8 @@ Desenvolver uma plataforma, com foco na gestão de recursos humanos.
   - Cadastro;
   - Home;
   - Detalhes do Funcionário;
-  - Folha de Pagamento;
+  - Folha de Pontos;
+  - Perfil.
 
 ### Prints do App:
 
