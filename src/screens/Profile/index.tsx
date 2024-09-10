@@ -22,7 +22,7 @@ export default function Profile() {
                   alt="Foto perfil do usuario"
                   style={styles.containerImage}
                 />
-                <TouchableOpacity style={styles.containerLinha1}>
+                <TouchableOpacity style={styles.containerLinha}>
                   <MaterialCommunityIcons
                     name="image-edit-outline"
                     size={24}
@@ -59,8 +59,14 @@ export default function Profile() {
         </ScrollView>
 
         <TouchableOpacity style={styles.botaoSair}>
-          <MaterialIcons name="exit-to-app" size={24} color="black" />
-          <Text style={{ fontFamily: "Inter_500Medium", fontSize: 20 }}>
+          <MaterialIcons name="exit-to-app" size={24} color="#000" />
+          <Text
+            style={{
+              fontFamily: "Inter_500Medium",
+              fontSize: 20,
+              color: "#000",
+            }}
+          >
             Sair do aplicativo
           </Text>
         </TouchableOpacity>

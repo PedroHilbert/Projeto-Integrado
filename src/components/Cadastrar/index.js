@@ -3,6 +3,10 @@ import Feather from '@expo/vector-icons/Feather';
 import { styles } from './styles';
 
 export default function Cadastrar({
+  nomeUsuario,
+  setNomeUsuario,
+  usuario,
+  setUsuario,
   senha,
   setSenha,
   senhaVisivel,
@@ -12,23 +16,30 @@ export default function Cadastrar({
 }) {
   return (
     <View style={styles.campoEntrada}>
-      {/* Campo de entrada de texto - Somente em cadastro*/}
-      <>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.inputEmail}
-            placeholder="Nome"
-            placeholderTextColor="#4B93E7"
-          />
-        </View>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.inputEmail}
-            placeholder="Sobrenome"
-            placeholderTextColor="#4B93E7"
-          />
-        </View>
-      </>
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.inputEmail}
+          placeholder="Nome"
+          placeholderTextColor="#4B93E7"
+        />
+      </View>
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.inputEmail}
+          placeholder="Sobrenome"
+          placeholderTextColor="#4B93E7"
+        />
+      </View>
+      <View style={styles.inputContainer}>
+        <TextInput
+          inputMode="email"
+          keyboardType="email-address"
+          style={styles.inputEmail}
+          placeholder="Email"
+          placeholderTextColor="#4B93E7"
+          onChangeText={setUsuario}
+        />
+      </View>
 
       {/* ############# SENHA ############# */}
       <View style={styles.inputContainer}>

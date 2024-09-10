@@ -7,7 +7,7 @@ import Autenticar from '../../components/Autenticar/index';
 import Cadastrar from '../../components/Cadastrar/index';
 
 export default function Auth() {
-  const [isLoginSelected, setIsLoginSelected] = useState(true);
+  const [nomeUsuario, setNomeUsuario] = useState('');
   const [usuario, setUsuario] = useState('');
   const [senha, setSenha] = useState('');
   const [senhaVisivel, setSenhaVisivel] = useState(false);
@@ -70,6 +70,10 @@ export default function Auth() {
             />
           ) : (
             <Cadastrar
+              nomeUsuario={nomeUsuario}
+              setNomeUsuario={setNomeUsuario}
+              usuario={usuario}
+              setUsuario={setUsuario}
               senha={senha}
               setSenha={setSenha}
               senhaVisivel={senhaVisivel}

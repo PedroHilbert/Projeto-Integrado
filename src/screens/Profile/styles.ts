@@ -50,12 +50,14 @@ export const styles = StyleSheet.create({
   containerLinha: {
     flexDirection: "row",
     gap: 15,
+    marginBottom: 50,
   },
   containerLinha1: {
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
     flexDirection: "row",
     gap: 15,
+    width: "100%",
 
     borderRadius: 6,
     borderWidth: 0.5,
@@ -74,7 +76,7 @@ export const styles = StyleSheet.create({
 
     padding: 8,
     paddingRight: 16,
-    marginBottom: 12,
+    marginBottom: 25,
   },
   titulo1: {
     fontFamily: "Inter_700Bold",
@@ -98,10 +100,10 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 50,
     paddingVertical: 10,
     gap: 5,
-    marginBottom: 16,
+    marginBottom: 35,
     marginHorizontal: 16,
 
     borderRadius: 12,
-    backgroundColor: "rgba(151, 151, 151, 0.58)",
+    backgroundColor: "#F7AC25",
   },
 });

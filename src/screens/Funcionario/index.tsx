@@ -1,19 +1,18 @@
 import { Text, View, TouchableOpacity, Image } from "react-native";
 import { styles } from "./styles";
-import Feather from '@expo/vector-icons/Feather';
-import AntDesign from '@expo/vector-icons/AntDesign';
+import Feather from "@expo/vector-icons/Feather";
+import AntDesign from "@expo/vector-icons/AntDesign";
 import ScreenHeader from "../../components/ScreenHeader";
 import { useNavigation } from "@react-navigation/native";
 
 import { AppNavigatorRoutesProps } from "../../routes/app.routes";
 
 export default function Funcionario() {
-
   const navigation = useNavigation<AppNavigatorRoutesProps>();
 
   const handleGoBack = () => {
-    navigation.goBack()
-  }
+    navigation.goBack();
+  };
 
   return (
     <>
@@ -39,19 +38,17 @@ export default function Funcionario() {
           {/* Dados do funcionário */}
 
           <View style={styles.containerColunaLeft}>
-
             <Text style={styles.textoTitulo1}>Departamento</Text>
             <Text style={styles.textoTitulo2}>Design UI/UX</Text>
 
             <Text style={styles.textoTitulo1}>Cargo</Text>
             <Text style={styles.textoTitulo2}>Designer</Text>
 
-            <Text style={styles.textoTitulo1}>Modelo de TrabalhoCargo</Text>
+            <Text style={styles.textoTitulo1}>Modelo de Trabalho</Text>
             <Text style={styles.textoTitulo2}>Remoto</Text>
 
             <Text style={styles.textoTitulo1}>Salário (R$)</Text>
             <Text style={styles.textoTitulo2}>3.000,00</Text>
-
           </View>
 
           <TouchableOpacity>
@@ -74,7 +71,6 @@ export default function Funcionario() {
               <Text style={styles.textButton}>Registrar Ponto</Text>
             </View>
           </TouchableOpacity>
-
         </View>
       </View>
     </>
