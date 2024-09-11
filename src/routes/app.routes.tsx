@@ -5,6 +5,7 @@ import {
 import Home from "../screens/Home/index";
 import Profile from "../screens/Profile/index";
 import FolhaDePonto from "../screens/FolhaDePonto/index";
+import CadastroFuncionarios from '../screens/CadastroFuncionarios/index';
 
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -16,6 +17,7 @@ type AppRoutes = {
   profile: undefined;
   folhaDePonto: undefined;
   funcionario: undefined;
+  cadastroFuncionarios: undefined;
 };
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
@@ -68,7 +70,15 @@ export function AppRoutes() {
       <Screen
         name="funcionario"
         component={Funcionario}
-        options={{ tabBarButton: () => null }}
+        options={{ 
+          tabBarButton: () => null }}
+      />
+      <Screen
+        name="cadastroFuncionarios"
+        component={CadastroFuncionarios}
+        options={{ 
+          tabBarButton: () => null 
+        }}
       />
     </Navigator>
   );
